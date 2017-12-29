@@ -1,0 +1,16 @@
+version: '3.4'
+services:
+  mysql:
+    container_name: mysql_jon_snow
+    command: ['mysqld', '--character-set-server=utf8', '--collation-server=utf8_unicode_ci']
+    restart: always
+    image: mysql:latest
+    environment:
+      MYSQL_ROOT_PASSWORD: 'welcome1'
+      MYSQL_DATABASE: MYSQL_JON_SNOW
+      MYSQL_USER: 'AlphaUser'
+      MYSQL_PASSWORD: 'welcome1'
+    volumes:
+      - mysql-datavolume_jon_snow:/var/lib/mysql
+volumes:
+  mysql-datavolume_jon_snow:
