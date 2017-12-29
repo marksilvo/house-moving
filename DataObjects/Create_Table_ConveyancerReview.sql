@@ -4,6 +4,7 @@ CREATE TABLE conveyancer_review
              overall_rating INTEGER NOT NULL,
              review_date DATE NOT NULL,
              reviewer_username VARCHAR(100) NOT NULL,
+						 reviewer_role VARCHAR(100) NOT NULL,
              contactability INTEGER,
              politeness INTEGER,
              professionalism INTEGER,
